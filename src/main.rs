@@ -29,6 +29,11 @@ fn main() {
             break;
         }
 
+        if input.trim().eq_ignore_ascii_case("q") {
+            println!("Thanks for playing!");
+            break;
+        }
+
         let player = match parse_move(&input) {
             Some(mv) => mv,
             None => {
